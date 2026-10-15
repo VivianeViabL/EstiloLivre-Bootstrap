@@ -1,4 +1,5 @@
 $gradient: "bg-secondary bg-gradient";
+$titles: "bg-secondary h4";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -10,3 +11,4 @@ $gradient: "bg-secondary bg-gradient";
         cursor: url("img/cursor.png") 24 20, pointer;
     }
 }
+

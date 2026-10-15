@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head>  <!-- Documentação  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilo Livre ʕ•́ᴥ•̀ʔっ</title>
@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            <a class="nav-link active" aria-current="page" href="#home">Página Inicial</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="#sobre">Sobre Nós</a>
@@ -40,20 +40,68 @@
     </header>
 
     <main> 
-        <section id="home"> <!-- Banner -->
-            Banner e Botão Sobre Nós
+        <section id="home" class="container-fluid py-10 text-center text-white bg-dark"> <!-- Banner -->
+            <div class="container" py-5>
+            <h1 class="display-3 fw-bold">Estilo Livre</h1>
+            <p class="lead"> <!-- "lead" tem definições que dão destaque -->
+                Seu cabelo, suas regras.
+            </p>
+            <p>
+                Cortes autênticos, cores marcantes e liberdade
+                para expressar quem você é.
+            </p>
+            <p><a class="btn btn-primary" href="#sobre" role="button">Conhecer a Estilo Livre ♥</a></p>
+            </div>
         </section>
 
         <section id="sobre">
-            Sobre Nós
+            <p class="titles">Sobre Nós</p>
+            <h3>Sobre Nós</h3>
+            <p></p>
+            <p>Na Estilo Livre, acreditamos que cabelo também é uma forma de expressão. Criamos um espaço acolhedor e livre de julgamentos, onde cada pessoa pode encontrar seu próprio estilo e se sentir à vontade para ser quem é.
+            Somos uma barbearia que acolhe especialmente a comunidade LGBT+, mas nosso espaço é para todos. Oferecemos desde cortes clássicos e simples até estilos mais ousados e personalizados, sempre respeitando a personalidade e o gosto de cada cliente.
+            Nosso diferencial está nas colorações fantasia, cores marcantes e cortes diferenciados para quem quer fugir do tradicional e transformar o visual em algo único.</p>
         </section>
 
         <section id="servicos"> <!-- Cards -->
-            Serviços
+            <h3>Serviços</h3>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                    <img src="..." class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="depoimentos"> <!-- Carrosel -->
-            Depoimentos
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
         </section>
 
         <section id="contato"> <!-- Formulário -->
