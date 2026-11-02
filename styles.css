@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/* Personalizar variáveis -> https://getbootstrap.com/docs/5.3/customize/sass/?utm_source */
+/* variáveis */
+html {
+  scroll-behavior: smooth; /* Rolagem suave */
+}
+
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -73,7 +79,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: bg-secondary bg-gradient;
+  --bs-gradient: linear-gradient(90deg, #ffffff, #00a5bb);
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -11859,12 +11865,88 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.titles {
+  background-color: var(--bs-seconday);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-principal {
+  display: block;
+  width: 55%;
+  max-width: 3600px;
+  min-width: 180px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.navbartheme {
+  background: linear-gradient(90deg, #ffffff, #00a5bb);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center; /* Centraliza na vertical */
+  min-height: 85vh; /* "somado" comm o min declarado no html, fica mais no centro */
+  width: 100%;
+  text-align: center;
+}
+
+.secoes {
+  padding: 50px 0; /* espaçamento entre as seções */
+}
+
+.lista-servicos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.card-servico {
+  width: 100%;
+  max-width: 950px; /* aumenta o tamanho dos cards */
+  border: none; /* remove a borda tradicional dos cards do bootstrap*/
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f8f5f5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.card-servico:hover {
+  transform: translateY(-3px);
+}
+
+.card-servico .card-body {
+  padding: 30px;
+}
+
+/* ********* adicionar de volta aqui, o banner */
 @media (hover: hover) and (pointer: fine) {
   body {
     cursor: url("img/cursor.png") 24 20, auto;
   }
   a, button {
     cursor: url("img/cursor.png") 24 20, pointer;
+  }
+}
+@media (max-width: 768px) {
+  .logo-principal {
+    width: 70%;
+  }
+  .imagem-servico {
+    height: 230px;
+  }
+  .card-servico .card-body {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .logo-principal {
+    width: 85%;
+    min-width: 150px;
   }
 }
 

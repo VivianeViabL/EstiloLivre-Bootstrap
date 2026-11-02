@@ -1,7 +1,76 @@
-$gradient: "bg-secondary bg-gradient";
-$titles: "bg-secondary h4";
+
+/* Personalizar variáveis -> https://getbootstrap.com/docs/5.3/customize/sass/?utm_source */
+/* variáveis */
+$gradient: linear-gradient(90deg, #ffffff, #00a5bb);
+$bannerEscuro: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+$corbotao: rgb(0, 204, 255);
+
+html {
+  scroll-behavior: smooth; /* Rolagem suave */
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.titles{
+    background-color: var(--bs-seconday);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-principal{
+    display: block;
+    width: 55%;
+    max-width: 3600px;
+    min-width: 180px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.navbartheme{
+    background: $gradient;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+    min-height: 85vh;  /* "somado" comm o min declarado no html, fica mais no centro */
+    width: 100%;
+    text-align: center;
+    }
+
+.secoes {
+    padding: 50px 0; /* espaçamento entre as seções */
+}
+
+.lista-servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.card-servico{
+    width: 100%;
+    max-width: 950px; /* aumenta o tamanho dos cards */
+    border: none; /* remove a borda tradicional dos cards do bootstrap*/
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f8f5f5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+    } 
+}
+
+.card-servico .card-body {
+    padding: 30px;
+}
+/* ********* adicionar de volta aqui, o banner */
+
 
 @media (hover: hover) and (pointer: fine) {
     body {
@@ -12,3 +81,21 @@ $titles: "bg-secondary h4";
     }
 }
 
+@media (max-width: 768px) {
+    .logo-principal {
+        width: 70%;
+    }
+    .imagem-servico {
+        height: 230px;
+    }
+    .card-servico .card-body {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-principal {
+        width: 85%;
+        min-width: 150px;
+    }
+}

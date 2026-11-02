@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>  <!-- Documentação  -->
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilo Livre ʕ•́ᴥ•̀ʔっ</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/Logo-.jpg" type="image/png">
 </head>
-<body>
+<body > <!-- **** colocar de volta o class="intro-active" (banner) depois que finalizar os ajustes -->
     <!-- Navbar -->
     <header>
-    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Estilo Livre</a>
+    <nav class="navbartheme navbar sticky-top navbar-expand-lg bg-body-tertiary " >
+    <div id="conteudo-site" class="container-fluid">
+        <a class="navbar-brand" href="#"> <img src="img/Logo-.jpg" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">Estilo Livre</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,7 +22,7 @@
             <a class="nav-link active" aria-current="page" href="#home">Página Inicial</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#sobre">Sobre Nós</a>
+            <a class="nav-link " href="#sobre">Sobre Nós</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="#servicos">Serviços</a>
@@ -39,8 +39,8 @@
     </nav>
     </header>
 
-    <main> 
-        <section id="home" class="container-fluid py-10 text-center text-white bg-dark"> <!-- Banner -->
+    <main class="container">  
+        <section id="intro-banner" class="container-fluid min-vh-100 py-5 text-center text-white banner"> <!-- Banner -->
             <div class="container" py-5>
             <h1 class="display-3 fw-bold">Estilo Livre</h1>
             <p class="lead"> <!-- "lead" tem definições que dão destaque -->
@@ -50,12 +50,13 @@
                 Cortes autênticos, cores marcantes e liberdade
                 para expressar quem você é.
             </p>
-            <p><a class="btn btn-primary" href="#sobre" role="button">Conhecer a Estilo Livre ♥</a></p>
+            <p><a class="btn btn-primary" id="entrar-site" href="#sobre" type="button" role="button">Conhecer a Estilo Livre ♥</a></p>
             </div>
         </section>
-
-        <section id="sobre">
-            <p class="titles">Sobre Nós</p>
+    
+    <div id="conteudo-site">
+        <section class="secoes" id="sobre">
+            <img src="img/LogoCompleto-.png" class="logo-principal secoes" alt="Logo Estilo Livre"> <!-- ajustar tamanho logo -->
             <h3>Sobre Nós</h3>
             <p></p>
             <p>Na Estilo Livre, acreditamos que cabelo também é uma forma de expressão. Criamos um espaço acolhedor e livre de julgamentos, onde cada pessoa pode encontrar seu próprio estilo e se sentir à vontade para ser quem é.
@@ -63,55 +64,114 @@
             Nosso diferencial está nas colorações fantasia, cores marcantes e cortes diferenciados para quem quer fugir do tradicional e transformar o visual em algo único.</p>
         </section>
 
-        <section id="servicos"> <!-- Cards -->
+        <section id="servicos" class="secoes"> <!-- Cards -->
             <h3>Serviços</h3>
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                    <img src="..." class="img-fluid rounded-start" alt="...">
+            
+            <div class="lista-servicos">
+            <div class="card card-servico mb-4">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                    <img src="img/hair-degrade.jpg" class="img-fluid rounded-start" alt="Degradê">
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">Cortes com Degradê</h5>
+                        <p class="card-text">Um clássico cheio de muita presença! Do degradê suave ao marcado, criamos transições precisas e modernas para valorizar seu estilo.</p>
                     </div>
                     </div>
                 </div>
             </div>
+            <div class="card card-servico mb-4">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                    <img src="img/hair-colorido.jpg" class="img-fluid rounded-start" alt="Colorido">
+                    </div>
+                    <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Coloridos</h5>
+                        <p class="card-text">Somos especializados em colorações fantasias, e em conjunto com nossos designs criativos e inovadores, trazemos ainda mais personalidade no visual!</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-servico mb-4">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                    <img src="img/hair-longo.png" class="img-fluid rounded-start" alt="Longos">
+                    </div>
+                    <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Longos</h5>
+                        <p class="card-text">Movimento, leveza e estilo em cada detalhe. Valorizamos o comprimento dos fios com cortes personalizados que combinam com sua personalidade.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-servico mb-4">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                    <img src="img/hair-curto.jpg" class="img-fluid rounded-start" alt="Curtos">
+                    </div>
+                    <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Curtos e Raspados</h5>
+                        <p class="card-text">Para quem gosta de praticidade ou quer ousar no visual! De cortes curtinhos a raspados marcantes, aqui você tem liberdade para experimentar.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>            
         </section>
 
-        <section id="depoimentos"> <!-- Carrosel -->
+        <section id="depoimentos" class="secoes"> <!-- Carrosel // Depoimentos --> 
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src=".." class="d-block w-100" alt="..."><p class="titles">teste 1</p>
                 </div>
                 <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src="img/.." class="d-block w-100" alt="...">teste 2
                 </div>
                 <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
+                <img src=".." class="d-block w-100" alt="...">teste 3
+                </div>
+                <div class="carousel-item">
+                <img src="img/LogoCompleto.png" class="d-block w-50" alt="...">teste 4
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="visually-hidden">Anterior</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="visually-hidden">Proximo</span>
             </button>
             </div>
         </section>
 
-        <section id="contato"> <!-- Formulário -->
-            Contato
+        <section id="contato" class="secoes"> <!-- Formulário -->
+            <div class="mb-3">
+                <p><label for="nome">Nome Completo: </label>
+                <input class="form-control" id="nome" type="text" placeholder="Ex. Maria Silva" required></p>
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
+                </div>
+                <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Enviar mensagem</button>
         </section>
     </main>
 
     <footer class="text-center py-1 mt-5">
         <p>&copy; 2026 - Estilo Livre</p>
     </footer>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
