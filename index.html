@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/Logo-.jpg" type="image/png">
 </head>
-<body > <!-- **** colocar de volta o class="intro-active" (banner) depois que finalizar os ajustes -->
+<body class="intro-active">
     <!-- Navbar -->
     <header>
     <nav class="navbartheme navbar sticky-top navbar-expand-lg bg-body-tertiary " >
@@ -42,7 +42,7 @@
     <main class="container">  
         <section id="intro-banner" class="container-fluid min-vh-100 py-5 text-center text-white banner"> <!-- Banner -->
             <div class="container" py-5>
-            <h1 class="display-3 fw-bold">Estilo Livre</h1>
+            <h1 class="titles display-3 fw-bold">Estilo Livre</h1>
             <p class="lead"> <!-- "lead" tem definições que dão destaque -->
                 Seu cabelo, suas regras.
             </p>
@@ -57,15 +57,18 @@
     <div id="conteudo-site">
         <section class="secoes" id="sobre">
             <img src="img/LogoCompleto-.png" class="logo-principal secoes" alt="Logo Estilo Livre"> <!-- ajustar tamanho logo -->
-            <h3>Sobre Nós</h3>
-            <p></p>
+            <h3 class="titles text-center">Sobre Nós</h3>
+            <div class="card about-card shadow-sm">
+                <div class="card-body">
             <p>Na Estilo Livre, acreditamos que cabelo também é uma forma de expressão. Criamos um espaço acolhedor e livre de julgamentos, onde cada pessoa pode encontrar seu próprio estilo e se sentir à vontade para ser quem é.
             Somos uma barbearia que acolhe especialmente a comunidade LGBT+, mas nosso espaço é para todos. Oferecemos desde cortes clássicos e simples até estilos mais ousados e personalizados, sempre respeitando a personalidade e o gosto de cada cliente.
             Nosso diferencial está nas colorações fantasia, cores marcantes e cortes diferenciados para quem quer fugir do tradicional e transformar o visual em algo único.</p>
+                </div>
+            </div>
         </section>
 
         <section id="servicos" class="secoes"> <!-- Cards -->
-            <h3>Serviços</h3>
+            <h3 class="titles text-center">Serviços</h3>
             
             <div class="lista-servicos">
             <div class="card card-servico mb-4">
@@ -75,7 +78,7 @@
                     </div>
                     <div class="col-md-7">
                     <div class="card-body">
-                        <h5 class="card-title">Cortes com Degradê</h5>
+                        <h5 class="titles card-title">Cortes com Degradê</h5>
                         <p class="card-text">Um clássico cheio de muita presença! Do degradê suave ao marcado, criamos transições precisas e modernas para valorizar seu estilo.</p>
                     </div>
                     </div>
@@ -88,7 +91,7 @@
                     </div>
                     <div class="col-md-7">
                     <div class="card-body">
-                        <h5 class="card-title">Coloridos</h5>
+                        <h5 class="titles card-title">Coloridos</h5>
                         <p class="card-text">Somos especializados em colorações fantasias, e em conjunto com nossos designs criativos e inovadores, trazemos ainda mais personalidade no visual!</p>
                     </div>
                     </div>
@@ -101,7 +104,7 @@
                     </div>
                     <div class="col-md-7">
                     <div class="card-body">
-                        <h5 class="card-title">Longos</h5>
+                        <h5 class="titles card-title">Longos</h5>
                         <p class="card-text">Movimento, leveza e estilo em cada detalhe. Valorizamos o comprimento dos fios com cortes personalizados que combinam com sua personalidade.</p>
                     </div>
                     </div>
@@ -114,7 +117,7 @@
                     </div>
                     <div class="col-md-7">
                     <div class="card-body">
-                        <h5 class="card-title">Curtos e Raspados</h5>
+                        <h5 class="titles card-title">Curtos e Raspados</h5>
                         <p class="card-text">Para quem gosta de praticidade ou quer ousar no visual! De cortes curtinhos a raspados marcantes, aqui você tem liberdade para experimentar.</p>
                     </div>
                     </div>
@@ -125,26 +128,51 @@
         </section>
 
         <section id="depoimentos" class="secoes"> <!-- Carrosel // Depoimentos --> 
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <h3 class="titles text-center">O que dizem nossos clientes</h3>
+            <div id="carouselExampleAutoplaying" class="carousel slide testimonials-carousel" data-bs-ride="carousel" data-bs-interval="6000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src=".." class="d-block w-100" alt="..."><p class="titles">teste 1</p>
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <img src="img/5-estrelas.svg" class="testimonial-stars" alt="5 estrelas">
+                            <p class="card-text">“Amei o atendimento e saí com o visual exatamente como queria!”</p>
+                            <p class="mb-0 fw-bold">— Cliente da Estilo Livre</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                <img src="img/.." class="d-block w-100" alt="...">teste 2
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <img src="img/5-estrelas.svg" class="testimonial-stars" alt="5 estrelas">
+                            <p class="card-text">“Ambiente acolhedor, equipe atenciosa e um corte impecável.”</p>
+                            <p class="mb-0 fw-bold">— Cliente da Estilo Livre</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                <img src=".." class="d-block w-100" alt="...">teste 3
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <img src="img/5-estrelas.svg" class="testimonial-stars" alt="5 estrelas">
+                            <p class="card-text">“Minha coloração ficou linda. Já quero voltar para experimentar outra cor!”</p>
+                            <p class="mb-0 fw-bold">— Cliente da Estilo Livre</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                <img src="img/LogoCompleto.png" class="d-block w-50" alt="...">teste 4
+                    <div class="card testimonial-card">
+                        <div class="card-body">
+                            <img src="img/5-estrelas.svg" class="testimonial-stars" alt="5 estrelas">
+                            <p class="card-text">“Finalmente encontrei um salão onde posso expressar meu estilo com liberdade.”</p>
+                            <p class="mb-0 fw-bold">— Cliente da Estilo Livre</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" aria-label="Depoimento anterior">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" aria-label="Próximo depoimento">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Proximo</span>
             </button>
@@ -152,17 +180,27 @@
         </section>
 
         <section id="contato" class="secoes"> <!-- Formulário -->
-            <div class="mb-3">
-                <p><label for="nome">Nome Completo: </label>
-                <input class="form-control" id="nome" type="text" placeholder="Ex. Maria Silva" required></p>
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
+            <form>
+            <div class="card contact-card">
+                <div class="card-body">
+                <h3 class="titles text-center">Entre em contato conosco</h3>
+                <div class="mb-2">
+                    <label for="nome" class="form-label">Nome completo</label>
+                    <input class="form-control" id="nome" type="text" placeholder="Ex.: Maria Silva" required>
                 </div>
-                <div class="mb-3">
-                <label for="mensagem" class="form-label">Mensagem</label>
-                <textarea class="form-control" id="mensagem" rows="3"></textarea>
+                <div class="mb-2">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
                 </div>
-                <button type="submit" class="btn btn-primary mb-3">Enviar mensagem</button>
+                <div class="mb-2">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+                </div>
+            </div>
+            </form>
+
         </section>
     </main>
 

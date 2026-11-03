@@ -4,6 +4,11 @@
 $gradient: linear-gradient(90deg, #ffffff, #00a5bb);
 $bannerEscuro: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
 $corbotao: rgb(0, 204, 255);
+$primary: #008fa3;
+$secondary: #075b70;
+$link-color: #075b70;
+$font-family-sans-serif: Georgia, "Times New Roman", serif;
+$font-size-base: 1.1rem;
 
 html {
   scroll-behavior: smooth; /* Rolagem suave */
@@ -12,9 +17,48 @@ html {
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .titles{
-    background-color: var(--bs-seconday);
-    font-size: 1.5rem;
-    font-weight: bold;
+    color: $secondary;
+    font-size: 2.15rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+
+.banner .titles {
+    color: #fff;
+}
+
+.titles.card-title {
+    font-size: 1.65rem;
+}
+
+body {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-base;
+    font-weight: 600;
+    font-style: italic;
+}
+
+footer {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.btn-primary {
+    --bs-btn-bg: #{$primary};
+    --bs-btn-border-color: #{$primary};
+    --bs-btn-hover-bg: #006f80;
+    --bs-btn-hover-border-color: #006878;
+    --bs-btn-active-bg: #005d6b;
+    --bs-btn-active-border-color: #005663;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #{$primary};
+    --bs-btn-border-color: #{$primary};
+    --bs-btn-hover-bg: #{$primary};
+    --bs-btn-hover-border-color: #{$primary};
 }
 
 .logo-principal{
@@ -44,6 +88,83 @@ html {
     padding: 50px 0; /* espaçamento entre as seções */
 }
 
+#sobre {
+    .about-card {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: clamp(1rem, 3vw, 2rem);
+        border-radius: 1.25rem;
+        background: linear-gradient(135deg, #f0fbfd, #ffffff);
+        border-top: 5px solid $primary;
+    }
+
+    .about-card .card-body {
+        padding: clamp(1.25rem, 3vw, 2.5rem);
+        line-height: 1.8;
+    }
+}
+
+.testimonials-carousel {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    background: linear-gradient(135deg, #e8f8fb, #ffffff);
+    box-shadow: 0 .75rem 2rem rgba(7, 91, 112, .14);
+
+    .carousel-item {
+        min-height: 270px;
+        padding: 3.5rem 5rem;
+    }
+
+    .testimonial-card {
+        max-width: 650px;
+        margin: 0 auto;
+        padding: 2rem;
+        border: 0;
+        border-radius: 1rem;
+        background-color: rgba(255, 255, 255, .88);
+        text-align: center;
+    }
+
+    .testimonial-stars {
+        display: block;
+        width: 150px;
+        height: 30px;
+        margin: 0 auto 1rem;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(31%) sepia(29%) saturate(1445%) hue-rotate(146deg) brightness(88%);
+    }
+}
+
+.contact-card {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    border: 0;
+    border-radius: 1.25rem;
+    background: linear-gradient(135deg, #e8f8fb, #f8fdfe);
+    box-shadow: 0 .75rem 2rem rgba(7, 91, 112, .15);
+
+    .form-label {
+        margin-bottom: .25rem;
+    }
+
+    .form-control {
+        margin-bottom: .75rem;
+        border-color: #a8d9e1;
+        border-radius: .7rem;
+    }
+
+    .form-control:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 .25rem rgba(0, 143, 163, .2);
+    }
+}
+
 .lista-servicos {
     display: flex;
     flex-direction: column;
@@ -69,8 +190,46 @@ html {
 .card-servico .card-body {
     padding: 30px;
 }
-/* ********* adicionar de volta aqui, o banner */
 
+body.intro-active { // Impede a rolagem enquanto o banner estiver aberto
+    overflow: hidden;
+}
+
+// Banner que cobre a tela
+#intro-banner {
+    position: fixed; 
+    inset: 0; // faz o banner encostar nas laterais da tela
+    z-index: 1055; // coloca o banner na frente do Navbar e do conteudo-site
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    min-height: 100dvh; //Faz o banner ocupar pelo menos a altura visível da tela.
+    padding: 2rem;
+
+    background: $bannerEscuro, url("img/BannerImg.png") center / cover no-repeat;
+
+    // Estado inicial: cobrindo toda a tela
+    transform: translateX(0);
+
+    transition: transform 900ms // Suaviza a transição do banner
+        cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+// Classe adicionada pelo JavaScript
+#intro-banner.is-opening {
+    transform: translateX(-100%); // Desloca o banner para a esquerda
+    pointer-events: none;
+}
+
+// Respeita quem prefere movimento reduzido
+@media (prefers-reduced-motion: reduce) {
+    #intro-banner {
+        transition-duration: 0.01ms;
+    }
+}
 
 @media (hover: hover) and (pointer: fine) {
     body {
@@ -97,5 +256,19 @@ html {
     .logo-principal {
         width: 85%;
         min-width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .titles {
+        font-size: 1.8rem;
+    }
+
+    .testimonials-carousel .carousel-item {
+        padding: 2.5rem 2.75rem;
+    }
+
+    .testimonials-carousel .testimonial-card {
+        padding: 1.25rem;
     }
 }
